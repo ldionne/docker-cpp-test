@@ -6,3 +6,9 @@ services:
 
 before_install:
   - docker info
+
+script:
+  - docker pull ldionne/gcc-app:v1
+  - docker ps -a
+  - docker run ldionne/gcc-app:v1 /bin/sh -c "echo 'I am being run in the image'; gcc --version"
+  - docker ps -a

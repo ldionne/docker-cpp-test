@@ -1,0 +1,6 @@
+os: linux
+dist: trusty
+sudo: false
+
+script:
+  - echo "hello!"
